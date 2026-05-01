@@ -125,6 +125,8 @@ Conforme os artigos 17 a 22 da LGPD, você pode exercer os seguintes direitos a 
 
 Para exercer qualquer destes direitos, envie um email para [contato@quemfaz.com.br](mailto:contato@quemfaz.com.br) com o assunto **"[LGPD] Solicitação"**. Buscamos responder em até **15 dias** corridos a contar do recebimento, conforme prazo recomendado pela ANPD.
 
+Para o direito específico de **eliminação da conta e dos dados pessoais associados**, há uma página dedicada com o passo-a-passo do procedimento, incluindo o que é excluído imediatamente, o que é retido e por quanto tempo: [Excluir minha conta](/excluir-conta.html).
+
 ## 9. Segurança da informação e notificação de incidentes
 
 Adotamos medidas técnicas e administrativas para proteger os dados pessoais contra acessos não autorizados e situações acidentais ou ilícitas de destruição, perda, alteração, comunicação ou difusão, em conformidade com o art. 46 da LGPD. Entre essas medidas:
