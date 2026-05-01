@@ -1,0 +1,12 @@
+title: QuemFaz
+description: "Quem faz o que você precisa, na sua cidade."
+theme: jekyll-theme-minimal
+lang: pt-BR
+permalink: /:basename:output_ext
+
+# Files NOT to render (everything that's source-only or readme)
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - .github
