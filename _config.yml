@@ -1,10 +1,14 @@
 title: QuemFaz
-description: "Quem faz o que você precisa, na sua cidade."
-theme: jekyll-theme-minimal
+description: "O radar de profissionais de serviços locais."
 lang: pt-BR
-permalink: /:basename:output_ext
 
-# Files NOT to render (everything that's source-only or readme)
+# Custom design — no Jekyll theme. The legal-doc markdowns (privacidade.md,
+# termos.md, diretrizes.md) use _layouts/default.html, which is fully
+# self-contained (own CSS via /assets/css/{tokens,docs}.css). The landing
+# (index.html) is a plain HTML file with no front-matter, served verbatim
+# by Jekyll without processing.
+
+# Files NOT to render
 exclude:
   - README.md
   - Gemfile

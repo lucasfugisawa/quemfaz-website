@@ -1,0 +1,102 @@
+/* ============================================================
+   QuemFaz — Design tokens (web subset of the mobile system)
+   Paleta: Confiança quente · Tipografia: Plus Jakarta Sans
+   ============================================================ */
+
+@font-face { font-family: 'Plus Jakarta Sans'; font-weight: 400; font-style: normal; font-display: swap; src: url('../fonts/PlusJakartaSans-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'Plus Jakarta Sans'; font-weight: 500; font-style: normal; font-display: swap; src: url('../fonts/PlusJakartaSans-Medium.ttf') format('truetype'); }
+@font-face { font-family: 'Plus Jakarta Sans'; font-weight: 600; font-style: normal; font-display: swap; src: url('../fonts/PlusJakartaSans-SemiBold.ttf') format('truetype'); }
+@font-face { font-family: 'Plus Jakarta Sans'; font-weight: 700; font-style: normal; font-display: swap; src: url('../fonts/PlusJakartaSans-Bold.ttf') format('truetype'); }
+@font-face { font-family: 'Plus Jakarta Sans'; font-weight: 800; font-style: normal; font-display: swap; src: url('../fonts/PlusJakartaSans-ExtraBold.ttf') format('truetype'); }
+
+:root {
+  /* Colors — Confiança quente */
+  --qf-primary: #0F766E;
+  --qf-primary-soft: #CCFBF1;
+  --qf-primary-strong: #115E59;
+  --qf-secondary: #D97706;
+  --qf-secondary-soft: #FEF3C7;
+
+  --qf-surface: #FFFFFF;
+  --qf-surface-variant: #F8FAFA;
+  --qf-surface-warm: #FBF8F3; /* off-white com leve calor pra landing */
+
+  --qf-outline: #E2E8F0;
+  --qf-outline-soft: #EDF2F4;
+
+  --qf-on-surface: #0F172A;
+  --qf-on-surface-muted: #475569;
+  --qf-on-surface-faint: #64748B;
+
+  --qf-whatsapp: #25D366;
+
+  /* Pastels for category cards */
+  --qf-pastel-blue: #DBEAFE;
+  --qf-pastel-mint: #D1FAE5;
+  --qf-pastel-peach: #FED7AA;
+  --qf-pastel-rose:  #FECDD3;
+  --qf-pastel-lilac: #E9D5FF;
+  --qf-pastel-sand:  #FEF3C7;
+  --qf-pastel-sky:   #BAE6FD;
+  --qf-pastel-leaf:  #BBF7D0;
+  --qf-pastel-clay:  #FECACA;
+  --qf-pastel-cream: #FDE68A;
+  --qf-pastel-mist:  #E0E7FF;
+  --qf-pastel-petal: #FCE7F3;
+
+  /* Type */
+  --qf-font: 'Plus Jakarta Sans', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Spacing scale */
+  --qf-space-2xs: 4px;
+  --qf-space-xs:  8px;
+  --qf-space-s:   12px;
+  --qf-space-m:   16px;
+  --qf-space-l:   24px;
+  --qf-space-xl:  32px;
+  --qf-space-2xl: 48px;
+  --qf-space-3xl: 64px;
+  --qf-space-4xl: 96px;
+
+  /* Radii */
+  --qf-radius-s:    8px;
+  --qf-radius-m:    12px;
+  --qf-radius-l:    16px;
+  --qf-radius-xl:   24px;
+  --qf-radius-2xl:  32px;
+  --qf-radius-full: 9999px;
+
+  /* Shadows — petróleo-tinted */
+  --qf-shadow-s: 0 1px 2px rgba(15, 118, 110, 0.06), 0 1px 3px rgba(15, 118, 110, 0.04);
+  --qf-shadow-m: 0 4px 14px rgba(15, 118, 110, 0.10), 0 1px 3px rgba(15, 118, 110, 0.06);
+  --qf-shadow-l: 0 18px 44px rgba(15, 23, 42, 0.14), 0 6px 14px rgba(15, 23, 42, 0.06);
+
+  /* Density (overridable for tweaks) */
+  --qf-density-y: 1;
+
+  /* Container */
+  --qf-container: 1180px;
+}
+
+/* Reset minimal */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; }
+img, svg { display: block; max-width: 100%; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; padding: 0; }
+a { color: inherit; }
+:focus-visible {
+  outline: 2px solid var(--qf-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+html, body {
+  font-family: var(--qf-font);
+  color: var(--qf-on-surface);
+  background: var(--qf-surface);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.qf-tabular { font-feature-settings: "tnum"; font-variant-numeric: tabular-nums; }

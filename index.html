@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0F766E">
+<title>QuemFaz — Quem faz o que você precisa, aqui na sua cidade.</title>
+<meta name="description" content="QuemFaz conecta você a profissionais de serviços locais — pintor, eletricista, faxina, garçom, encanador. Conversa direto via WhatsApp. Sem comissão, sem mensalidade, sem leads pagos.">
+<link rel="icon" type="image/svg+xml" href="assets/img/app-icon.svg">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/landing.css">
+
+<!-- Open Graph -->
+<meta property="og:title" content="QuemFaz — Quem faz o que você precisa, aqui na sua cidade.">
+<meta property="og:description" content="Encontre profissionais de serviços locais. Conversa direto via WhatsApp. Sem comissão, sem mensalidade.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://quemfaz.com.br">
+
+<!--
+  Analytics — pre-launch interest tracking.
+
+  Currently INACTIVE. Uncomment and fill in the token of your chosen
+  provider to enable. See `docs/launch/website-analytics-setup.md` in
+  the main quemfaz repo for how to pick + sign up. Whichever you enable,
+  add the corresponding sub-processor row to privacidade.md before going
+  live.
+
+  Option A — Cloudflare Web Analytics (recommended pre-launch):
+    free, no cookies, no consent banner needed (LGPD-compliant by design).
+    Sign up at https://dash.cloudflare.com/?to=/:account/web-analytics
+    and replace YOUR_BEACON_TOKEN below.
+  -->
+<!--
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon='{"token": "YOUR_BEACON_TOKEN"}'></script>
+-->
+
+<!--
+  Option B — GoatCounter (if you want event tracking too):
+    free for non-commercial / €5 mo for commercial. No cookies.
+    Sign up at https://www.goatcounter.com and replace YOUR_CODE below.
+  -->
+<!--
+<script data-goatcounter="https://YOUR_CODE.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+-->
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="qf-header" id="qfHeader">
+  <div class="qf-container">
+    <div class="qf-header__inner">
+      <a href="#" class="qf-logo" aria-label="QuemFaz — página inicial">
+        <svg class="qf-logo__mark" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="lgmark" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#0F766E"></stop>
+              <stop offset="1" stop-color="#115E59"></stop>
+            </linearGradient>
+          </defs>
+          <rect width="64" height="64" rx="14" fill="url(#lgmark)"></rect>
+          <circle cx="28" cy="28" r="14" fill="none" stroke="#FFFFFF" stroke-width="4"></circle>
+          <path d="M38 38 L48 48" stroke="#FBBF24" stroke-width="4.5" stroke-linecap="round"></path>
+          <circle cx="28" cy="28" r="2.5" fill="#FBBF24"></circle>
+        </svg>
+        <span class="qf-logo__text">Quem<em>Faz</em></span>
+      </a>
+
+      <nav class="qf-nav" aria-label="Principal">
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#para-profissionais">Profissionais</a>
+        <a href="#faq">Dúvidas</a>
+      </nav>
+
+      <div class="qf-header__cta">
+        <a class="qf-btn qf-btn--ghost" href="#para-profissionais">Sou profissional</a>
+        <a class="qf-btn qf-btn--primary" href="#baixe">Baixe o app</a>
+      </div>
+
+      <button class="qf-menu-btn" id="qfMenuBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="qfMobileNav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="qf-mobile-nav" id="qfMobileNav" hidden>
+    <ul>
+      <li><a href="#como-funciona">Como funciona</a></li>
+      <li><a href="#categorias">Categorias</a></li>
+      <li><a href="#para-profissionais">Pra profissionais</a></li>
+      <li><a href="#privacidade">Privacidade</a></li>
+      <li><a href="#faq">Dúvidas</a></li>
+      <li><a href="#documentos">Documentos</a></li>
+    </ul>
+    <div class="qf-mobile-nav__cta">
+      <a class="qf-btn qf-btn--ghost qf-btn--block" href="#para-profissionais">Sou profissional</a>
+      <a class="qf-btn qf-btn--primary qf-btn--block" href="#baixe">Baixe o app</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="qf-hero" aria-labelledby="hero-title">
+  <div class="qf-hero__bg" aria-hidden="true"></div>
+  <div class="qf-container">
+    <div class="qf-hero__grid">
+      <div class="qf-hero__copy">
+        <span class="qf-eyebrow">
+          <span class="qf-eyebrow__dot"></span>
+          Em breve nas lojas — começando por Batatais/SP
+        </span>
+
+        <h1 id="hero-title" data-headline-slot>
+          Quem faz o que você precisa, <em>aqui na sua cidade</em>.
+        </h1>
+
+        <p class="qf-hero__sub" data-sub-slot>
+          Faxina, eletricista, pintor, encanador, garçom. Encontre alguém de confiança perto de você e converse direto pelo WhatsApp — sem intermediário, sem taxa.
+        </p>
+
+        <div class="qf-hero__cta">
+          <a class="qf-btn qf-btn--primary qf-btn--lg" href="#baixe">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" width="18" height="18"><path d="M12 5v14M5 12l7 7 7-7"></path></svg>
+            Baixe o app
+          </a>
+          <a class="qf-btn qf-btn--ghost qf-btn--lg" href="#para-profissionais">
+            Sou profissional, quero me cadastrar
+          </a>
+        </div>
+
+        <div class="qf-hero__meta">
+          <span class="qf-hero__meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
+            Grátis pra usar
+          </span>
+          <span class="qf-hero__meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
+            Sem comissão
+          </span>
+          <span class="qf-hero__meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
+            Conversa direto pelo WhatsApp
+          </span>
+        </div>
+      </div>
+
+      <!-- Hero visual — fiel à tela home real do app -->
+      <div class="qf-hero__viz" data-hero-viz aria-hidden="true">
+        <div class="qf-phone">
+          <div class="qf-phone__notch"></div>
+          <div class="qf-phone__screen">
+            <div class="qf-phone__statusbar">
+              <span>9:41</span>
+              <span style="display:inline-flex;gap:4px;align-items:center;font-size:11px;">●●● ▮</span>
+            </div>
+            <div class="qf-phone__topbar">
+              <div class="qf-phone__city">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-7-7.58-7-13a7 7 0 0 1 14 0c0 5.42-7 13-7 13z"></path><circle cx="12" cy="9" r="2.5"></circle></svg>
+                Batatais
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:12px;height:12px;margin-left:2px;"><path d="M6 9l6 6 6-6"></path></svg>
+              </div>
+              <span class="qf-phone__bell" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 16v-5a6 6 0 0 0-12 0v5l-2 2h16z"></path><path d="M10 21a2 2 0 0 0 4 0"></path></svg>
+              </span>
+            </div>
+            <h3 class="qf-phone__h">O que você procura?</h3>
+            <p class="qf-phone__sub">Conta com suas palavras — a gente entende.</p>
+            <div class="qf-phone__searchrow">
+              <div class="qf-phone__search">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+                <span>Ex: encanador pra vazamen</span>
+              </div>
+              <span class="qf-phone__mic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="9" y="3" width="6" height="12" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0M12 18v3"></path></svg>
+              </span>
+            </div>
+            <div class="qf-phone__sectiontitle">Mais buscados na sua cidade</div>
+            <div class="qf-phone__chips">
+              <span class="qf-phone__chip">Faxina</span>
+              <span class="qf-phone__chip">Eletricista</span>
+              <span class="qf-phone__chip">Encanador</span>
+              <span class="qf-phone__chip">Pintor</span>
+              <span class="qf-phone__chip">Garçom</span>
+              <span class="qf-phone__chip">Jardinagem</span>
+            </div>
+            <div class="qf-phone__promo">
+              <div class="qf-phone__promo-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c-1 0-2-1-2-2 1-3 3-5 6-6l5-5c2-2 5-2 7 0 0 2 0 5-2 7l-5 5c-1 3-3 5-6 6-1 0-2-1-2-2"/><circle cx="14" cy="10" r="1.5"/></svg>
+              </div>
+              <div class="qf-phone__promo-body">
+                <div class="qf-phone__promo-title">Ofereça seus serviços</div>
+                <div class="qf-phone__promo-sub">Quem precisa do que você faz, em Batatais.</div>
+                <div class="qf-phone__promo-btn">Cadastrar como profissional</div>
+              </div>
+            </div>
+            <div class="qf-phone__sectiontitle">Perto de você</div>
+            <div class="qf-phone__pro2">
+              <div class="qf-phone__pro2-photo" style="background:linear-gradient(135deg,#FCD34D,#D97706);">M</div>
+              <div class="qf-phone__pro2-info">
+                <div class="qf-phone__pro2-row">
+                  <div class="qf-phone__pro2-name">Marina Souza</div>
+                  <svg class="qf-phone__pro2-heart" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.5-9.5-9C1 9 3 5 7 5c2 0 4 1 5 3 1-2 3-3 5-3 4 0 6 4 4.5 7-2.5 4.5-9.5 9-9.5 9z"/></svg>
+                </div>
+                <div class="qf-phone__pro2-loc">Batatais · Centro</div>
+                <div class="qf-phone__pro2-desc">Faxina pesada e leve, passo roupa e organizo armários…</div>
+              </div>
+            </div>
+          </div>
+          <div class="qf-phone__navbar">
+            <div class="qf-phone__nav qf-phone__nav--active">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8v9a2 2 0 0 1-2 2h-4v-7H9v7H5a2 2 0 0 1-2-2z"/></svg>
+              <span>Início</span>
+            </div>
+            <div class="qf-phone__nav">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-9.5-9C1 9 3 5 7 5c2 0 4 1 5 3 1-2 3-3 5-3 4 0 6 4 4.5 7-2.5 4.5-9.5 9-9.5 9z"/></svg>
+              <span>Favoritos</span>
+            </div>
+            <div class="qf-phone__nav">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+              <span>Perfil</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="qf-float-card qf-float-card--1">
+          <div class="qf-float-card__avatar">A</div>
+          <div>
+            <div class="qf-float-card__name">Ana Lúcia</div>
+            <div class="qf-float-card__role">Faxineira · há 4 min</div>
+            <div class="qf-float-card__wpp">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11 11 0 0 0 3.7 17.7L2 22l4.4-1.6A11 11 0 1 0 20.5 3.5zM12 20a8 8 0 0 1-4-1.1l-.3-.2-2.6.9.9-2.5-.2-.3A8 8 0 1 1 12 20z"/></svg>
+              Conversa no WhatsApp
+            </div>
+          </div>
+        </div>
+
+        <div class="qf-float-card qf-float-card--2">
+          <div class="qf-float-card__avatar">C</div>
+          <div>
+            <div class="qf-float-card__name">Carlos Mendes</div>
+            <div class="qf-float-card__role">Eletricista · 12 anos</div>
+            <div class="qf-float-card__wpp">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11 11 0 0 0 3.7 17.7L2 22l4.4-1.6A11 11 0 1 0 20.5 3.5zM12 20a8 8 0 0 1-4-1.1l-.3-.2-2.6.9.9-2.5-.2-.3A8 8 0 1 1 12 20z"/></svg>
+              Conversa no WhatsApp
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMO FUNCIONA ============ -->
+<section class="qf-section qf-section--alt" id="como-funciona" aria-labelledby="cf-title">
+  <div class="qf-container">
+    <div class="qf-section__head">
+      <span class="qf-section__kicker">Como funciona</span>
+      <h2 id="cf-title">Encontrar ou ser encontrado<br>é simples assim.</h2>
+      <p>Sem cadastro complicado, sem cobrança escondida. O QuemFaz só te liga ao profissional — daí em diante, vocês combinam tudo direto.</p>
+    </div>
+
+    <div class="qf-tabs-wrap">
+      <div class="qf-tabs" role="tablist" aria-label="Para quem é">
+        <button class="qf-tab" role="tab" id="tab-cliente" aria-selected="true" aria-controls="pane-cliente" data-tab="cliente">Sou cliente</button>
+        <button class="qf-tab" role="tab" id="tab-profissional" aria-selected="false" aria-controls="pane-profissional" data-tab="profissional">Sou profissional</button>
+      </div>
+    </div>
+
+    <div id="pane-cliente" role="tabpanel" aria-labelledby="tab-cliente" data-tab-pane="cliente" class="is-active">
+      <div class="qf-steps">
+        <div class="qf-step">
+          <div class="qf-step__num">1</div>
+          <svg class="qf-step__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="12" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0M12 18v3M8 21h8"></path></svg>
+          <h3>Conta o que precisa</h3>
+          <p>Em palavras suas — "minha pia tá vazando", "pintor pro fim de semana". A gente entende.</p>
+        </div>
+        <div class="qf-step">
+          <div class="qf-step__num">2</div>
+          <svg class="qf-step__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+          <h3>Vê quem faz isso</h3>
+          <p>Profissionais da sua cidade aparecem com foto, descrição própria e como contatar.</p>
+        </div>
+        <div class="qf-step">
+          <div class="qf-step__num">3</div>
+          <svg class="qf-step__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 3.5A11 11 0 0 0 3.7 17.7L2 22l4.4-1.6A11 11 0 1 0 20.5 3.5z"></path></svg>
+          <h3>Conversa no WhatsApp</h3>
+          <p>Toca em quem chamou atenção e fala direto. Sem chat dentro do app, sem intermediário.</p>
+        </div>
+        <div class="qf-step">
+          <div class="qf-step__num">4</div>
+          <svg class="qf-step__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
+          <h3>Combina o serviço</h3>
+          <p>Preço, data, escopo — vocês acertam tudo direto. O QuemFaz não cobra comissão.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="pane-profissional" role="tabpanel" aria-labelledby="tab-profissional" data-tab-pane="profissional" hidden>
+      <div class="qf-steps">
+        <div class="qf-step">
+          <div class="qf-step__num">1</div>
+          <svg class="qf-step__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>
+          <h3>Conta o que você faz</h3>
+          <p>Descreve seus serviços com palavras suas. Foto, cidade, contato. Em 2 minutos.</p>
+        </div>
+        <div class="qf-step">
+          <div class="qf-step__num">2</div>
+          <svg class="qf-step__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path></svg>
+          <h3>A IA organiza seu perfil</h3>
+          <p>A gente entende o que você descreveu e te coloca nas buscas certas — sem você precisar marcar 50 categorias.</p>
+        </div>
+        <div class="qf-step">
+          <div class="qf-step__num">3</div>
+          <svg class="qf-step__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 3.5A11 11 0 0 0 3.7 17.7L2 22l4.4-1.6A11 11 0 1 0 20.5 3.5z"></path></svg>
+          <h3>Recebe contatos direto</h3>
+          <p>Cliente fala com você no WhatsApp. Você decide quais conversas atender.</p>
+        </div>
+        <div class="qf-step">
+          <div class="qf-step__num">4</div>
+          <svg class="qf-step__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"></path></svg>
+          <h3>Cobra direto, sem comissão</h3>
+          <p>Preço, prazo, forma de pagamento — tudo combinado entre você e o cliente. O dinheiro é seu.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CATEGORIAS ============ -->
+<section class="qf-section" id="categorias" aria-labelledby="cat-title">
+  <div class="qf-container">
+    <div class="qf-section__head">
+      <span class="qf-section__kicker">Categorias</span>
+      <h2 id="cat-title">Tem profissional pra (quase) tudo.</h2>
+      <p>Estes são alguns dos serviços mais buscados. Mas a busca é por linguagem natural — descreve o que você precisa e a gente acha.</p>
+    </div>
+
+    <div class="qf-cats">
+      <!-- 12 categorias -->
+      <a class="qf-cat" href="#baixe">
+        <span class="qf-cat__icon" style="background: var(--qf-pastel-blue); color:#1D4ED8">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l3-3 6-6 4 4-6 6-3 3z"></path><path d="M14 7l3-3 4 4-3 3"></path><path d="M9 13l-2 2"></path></svg>
+        </span>
+        <span class="qf-cat__name">Faxina e limpeza</span>
+      </a>
+      <a class="qf-cat" href="#baixe">
+        <span class="qf-cat__icon" style="background: var(--qf-pastel-cream); color:#B45309">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3l3 3-9 9-3-3z"></path><path d="M7 12l-4 4 4 4 4-4"></path><path d="M19 6l2-2"></path></svg>
+        </span>
+        <span class="qf-cat__name">Pintura</span>
+      </a>
+      <a class="qf-cat" href="#baixe">
+        <span class="qf-cat__icon" style="background: var(--qf-pastel-sand); color:#B45309">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"></path></svg>
+        </span>
+        <span class="qf-cat__name">Elétrica</span>
+      </a>
+      <a class="qf-cat" href="#baixe">
+        <span class="qf-cat__icon" style="background: var(--qf-pastel-sky); color:#0369A1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4v6a3 3 0 0 0 6 0V4"></path><path d="M9 4h6"></path><path d="M12 13v8"></path><path d="M9 21h6"></path></svg>
+        </span>
+        <span class="qf-cat__name">Encanamento</span>
+      </a>
+      <a class="qf-cat" href="#baixe">
+        <span class="qf-cat__icon" style="background: var(--qf-pastel-clay); color:#B91C1C">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M5 21V8l7-5 7 5v13"></path><path d="M9 21V13h6v8"></path></svg>
+        </span>
+        <span class="qf-cat__name">Marcenaria e reformas</span>
+      </a>
+      <a class="qf-cat" href="#baixe">
+        <span class="qf-cat__icon" style="background: var(--qf-pastel-lilac); color:#6D28D9">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v6a7 7 0 0 0 14 0V3"></path><path d="M5 3h14"></path><path d="M12 16v5"></path></svg>
+        </span>
+        <span class="qf-cat__name">Garçom e festas</span>
+      </a>
+      <a class="qf-cat" href="#baixe">
+        <span class="qf-cat__icon" style="background: var(--qf-pastel-petal); color:#BE185D">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8 2 6 5 6 9c0 4 4 7 6 7s6-3 6-7c0-4-2-7-6-7z"></path><path d="M12 16v6"></path></svg>
+        </span>
+        <span class="qf-cat__name">Beleza e estética</span>
+      </a>
+      <a class="qf-cat" href="#baixe">
+        <span class="qf-cat__icon" style="background: var(--qf-pastel-mist); color:#4338CA">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5l9-3 9 3v6c0 6-4 9-9 11-5-2-9-5-9-11V5z"></path><path d="M9 11l2 2 4-4"></path></svg>
+        </span>
+        <span class="qf-cat__name">Aulas particulares</span>
+      </a>
+      <a class="qf-cat" href="#baixe">
+        <span class="qf-cat__icon" style="background: var(--qf-pastel-rose); color:#BE123C">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12c0 4-4 8-9 8s-9-4-9-8 4-8 9-8 9 4 9 8z"></path><circle cx="9" cy="11" r="1"></circle><circle cx="15" cy="11" r="1"></circle><path d="M9 15c1 1 2 1.5 3 1.5s2-.5 3-1.5"></path></svg>
+        </span>
+        <span class="qf-cat__name">Cuidados (idosos, crianças, pets)</span>
+      </a>
+      <a class="qf-cat" href="#baixe">
+        <span class="qf-cat__icon" style="background: var(--qf-pastel-leaf); color:#15803D">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13c0-5 7-11 7-11s7 6 7 11a7 7 0 0 1-7 7z"></path><path d="M11 20v-7"></path></svg>
+        </span>
+        <span class="qf-cat__name">Jardinagem</span>
+      </a>
+      <a class="qf-cat" href="#baixe">
+        <span class="qf-cat__icon" style="background: var(--qf-pastel-peach); color:#C2410C">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h14a4 4 0 0 1 0 8H3z"></path><path d="M7 11V7a4 4 0 0 1 8 0v4"></path><path d="M19 13l3-1"></path></svg>
+        </span>
+        <span class="qf-cat__name">Cozinha (chef, doces)</span>
+      </a>
+      <a class="qf-cat" href="#baixe">
+        <span class="qf-cat__icon" style="background: var(--qf-pastel-mint); color:#047857">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="3"></circle><circle cx="18" cy="17" r="3"></circle><path d="M2 17h2M8 17h8M21 17h1"></path><path d="M5 11h14l-1.5-4h-11z"></path></svg>
+        </span>
+        <span class="qf-cat__name">Mecânica e chaveiro</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRA PROFISSIONAIS ============ -->
+<section class="qf-section qf-pro-section" id="para-profissionais" aria-labelledby="pro-title">
+  <div class="qf-container">
+    <div class="qf-pro-grid">
+      <div>
+        <span class="qf-section__kicker" style="color: var(--qf-secondary)">Pra profissionais</span>
+        <h2 id="pro-title" style="font-size: clamp(28px, 4.4vw, 44px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 800; margin-top: 12px;">
+          Sem mensalidade. Sem comissão. Apenas seu trabalho encontrando clientes na sua cidade.
+        </h2>
+        <p style="margin-top: 16px; color: rgba(255,255,255,0.72); font-size: 17px; line-height: 1.6; max-width: 480px;">
+          O QuemFaz nasceu pra valorizar o profissional brasileiro. Você cadastra, aparece nas buscas certas, e o cliente fala com você direto. Pronto.
+        </p>
+
+        <ul class="qf-pro-list" style="list-style:none; padding:0;">
+          <li class="qf-pro-item">
+            <span class="qf-pro-item__check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
+            </span>
+            <div>
+              <h4>Cadastro em 2 minutos, com voz</h4>
+              <p>Você fala o que faz com suas palavras. A IA organiza seu perfil pra aparecer nas buscas certas — sem você marcar 50 categorias.</p>
+            </div>
+          </li>
+          <li class="qf-pro-item">
+            <span class="qf-pro-item__check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
+            </span>
+            <div>
+              <h4>Cliente certo, da sua cidade</h4>
+              <p>A busca por linguagem natural traz quem realmente precisa do que você faz. Sem leads vagos, sem moedas pra ver contato.</p>
+            </div>
+          </li>
+          <li class="qf-pro-item">
+            <span class="qf-pro-item__check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
+            </span>
+            <div>
+              <h4>Contato direto, dinheiro seu</h4>
+              <p>Cliente fala no WhatsApp ou liga. Vocês combinam preço e prazo. O QuemFaz não entra no meio — e não cobra comissão.</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="qf-pro-cta">
+          <a class="qf-btn qf-btn--lg" style="background: var(--qf-secondary); color:#fff;" href="#baixe">
+            Quero me cadastrar
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div class="qf-pro-card">
+          <div class="qf-pro-card__sticker">grátis</div>
+          <div class="qf-pro-card__top">
+            <div class="qf-pro-card__photo" aria-hidden="true">
+              <span>M</span>
+            </div>
+            <div class="qf-pro-card__main">
+              <div class="qf-pro-card__row">
+                <div class="qf-pro-card__name">Marcos Almeida</div>
+                <svg class="qf-pro-card__heart" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7-4.5-9.5-9C1 9 3 5 7 5c2 0 4 1 5 3 1-2 3-3 5-3 4 0 6 4 4.5 7-2.5 4.5-9.5 9-9.5 9z"/></svg>
+              </div>
+              <div class="qf-pro-card__loc">Batatais · Centro</div>
+              <p class="qf-pro-card__desc">Encanador há 8 anos. Atende emergência, troca torneira, conserta vazamento, instala aquecedor. Trabalha fim de semana.</p>
+              <div class="qf-pro-card__tags">
+                <span class="qf-pro-card__tag">Encanador</span>
+                <span class="qf-pro-card__tag">Emergência</span>
+                <span class="qf-pro-card__tag">Aquecedor</span>
+              </div>
+              <div class="qf-pro-card__meta">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg>
+                <span>Ativo(a) hoje · Perfil completo</span>
+              </div>
+            </div>
+          </div>
+          <div class="qf-pro-card__contact">
+            <a class="qf-pro-card__btn qf-pro-card__btn--wpp" href="#">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11 11 0 0 0 3.7 17.7L2 22l4.4-1.6A11 11 0 1 0 20.5 3.5zM12 20a8 8 0 0 1-4-1.1l-.3-.2-2.6.9.9-2.5-.2-.3A8 8 0 1 1 12 20z"/></svg>
+              WhatsApp
+            </a>
+            <a class="qf-pro-card__btn qf-pro-card__btn--call" href="#">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              Ligar
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRIVACIDADE & CONFIANÇA ============ -->
+<section class="qf-section" id="privacidade" aria-labelledby="priv-title">
+  <div class="qf-container">
+    <div class="qf-section__head">
+      <span class="qf-section__kicker">Privacidade & confiança</span>
+      <h2 id="priv-title">A gente cuida dos seus dados como se fossem da gente.</h2>
+      <p>Privacidade não é "feature premium" aqui. É o jeito como o app foi pensado, desde o primeiro dia.</p>
+    </div>
+
+    <div class="qf-trust">
+      <div class="qf-trust__item">
+        <span class="qf-trust__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+        </span>
+        <h4>Validação por SMS</h4>
+        <p>Toda conta começa com um código no celular. Sem bots, sem perfis falsos.</p>
+      </div>
+      <div class="qf-trust__item">
+        <span class="qf-trust__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 4v6c0 5-4 9-9 10-5-1-9-5-9-10V6z"></path><path d="M12 8v4M12 16h.01"></path></svg>
+        </span>
+        <h4>Reportar é fácil</h4>
+        <p>Qualquer perfil pode ser reportado por qualquer pessoa. A comunidade ajuda a manter o app limpo.</p>
+      </div>
+      <div class="qf-trust__item">
+        <span class="qf-trust__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M9 12l2 2 4-4"></path></svg>
+        </span>
+        <h4>Sem dados de pagamento</h4>
+        <p>Você combina e paga direto com o profissional. A gente não toca em cartão, Pix ou conta bancária.</p>
+      </div>
+      <div class="qf-trust__item">
+        <span class="qf-trust__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12c0 4-4 8-9 8s-9-4-9-8 4-8 9-8 9 4 9 8z"></path><path d="M3 12h18"></path><path d="M12 4c2.5 2 4 5 4 8s-1.5 6-4 8c-2.5-2-4-5-4-8s1.5-6 4-8z"></path></svg>
+        </span>
+        <h4>LGPD by design</h4>
+        <p>Sem cookies de terceiros, sem trackers, sem publicidade direcionada. Só os dados estritamente necessários pro app funcionar.</p>
+      </div>
+    </div>
+
+    <div style="text-align:center;">
+      <a class="qf-trust__link" href="privacidade.html">
+        Saiba como tratamos seus dados → Política de Privacidade
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="qf-section qf-section--alt" id="faq" aria-labelledby="faq-title">
+  <div class="qf-container">
+    <div class="qf-section__head">
+      <span class="qf-section__kicker">Dúvidas</span>
+      <h2 id="faq-title">A gente te explica.</h2>
+    </div>
+
+    <div class="qf-faq">
+      <details class="qf-faq__item">
+        <summary>
+          <span>Quanto custa pra usar?</span>
+          <span class="qf-faq__plus" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg>
+          </span>
+        </summary>
+        <div class="qf-faq__answer">
+          Nada. Pra cliente é grátis, e pro profissional também. Não tem mensalidade, comissão ou moedas pra desbloquear contato. O QuemFaz se sustenta de outras formas — não cobrando você.
+        </div>
+      </details>
+
+      <details class="qf-faq__item">
+        <summary>
+          <span>Como o cliente paga o profissional?</span>
+          <span class="qf-faq__plus" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg>
+          </span>
+        </summary>
+        <div class="qf-faq__answer">
+          Direto. Pix, dinheiro, cartão — como vocês combinarem. O QuemFaz não intermedia pagamento. A gente só te conecta; o resto é entre você e quem você contratou.
+        </div>
+      </details>
+
+      <details class="qf-faq__item">
+        <summary>
+          <span>Como sei se o profissional é confiável?</span>
+          <span class="qf-faq__plus" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg>
+          </span>
+        </summary>
+        <div class="qf-faq__answer">
+          Todo perfil é validado por SMS — então tem uma pessoa real do outro lado. Você vê foto, descrição, e pode olhar o que outras pessoas relataram. A gente não verifica documento (não somos cartório), mas a comunidade modera junto: qualquer perfil suspeito pode ser reportado em um toque.
+        </div>
+      </details>
+
+      <details class="qf-faq__item">
+        <summary>
+          <span>Posso reportar um perfil falso ou abusivo?</span>
+          <span class="qf-faq__plus" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg>
+          </span>
+        </summary>
+        <div class="qf-faq__answer">
+          Sim, e é importante que você faça. Tem um botão de reportar em todo perfil. A gente analisa e remove rápido o que não respeita as <a href="diretrizes.html">Diretrizes da Comunidade</a>.
+        </div>
+      </details>
+
+      <details class="qf-faq__item">
+        <summary>
+          <span>Em quais cidades funciona?</span>
+          <span class="qf-faq__plus" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg>
+          </span>
+        </summary>
+        <div class="qf-faq__answer">
+          Estamos começando por <strong>Batatais (SP)</strong> e abrindo cidade por cidade — focando em médias e pequenas, não só capitais. Quer trazer pra sua cidade? Manda pra <a href="mailto:contato@quemfaz.com.br">contato@quemfaz.com.br</a>.
+        </div>
+      </details>
+
+      <details class="qf-faq__item">
+        <summary>
+          <span>Funciona em Android e iPhone?</span>
+          <span class="qf-faq__plus" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg>
+          </span>
+        </summary>
+        <div class="qf-faq__answer">
+          Sim, nos dois. O app está em fase final pra Play Store e App Store. Assim que sair, os botões "em breve" lá em cima viram links pras lojas.
+        </div>
+      </details>
+
+      <details class="qf-faq__item">
+        <summary>
+          <span>Preciso pagar pra ser encontrado como profissional?</span>
+          <span class="qf-faq__plus" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg>
+          </span>
+        </summary>
+        <div class="qf-faq__answer">
+          Não. Cadastro é grátis e aparecer nas buscas é grátis. Sem plano "destaque", sem leilão por posição, sem moedas. Foi pensado assim de propósito.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="qf-section" id="baixe">
+  <div class="qf-container">
+    <div class="qf-final-cta">
+      <h2>Pra começar é grátis.</h2>
+      <p>Baixe o QuemFaz e encontra quem faz o que você precisa, aqui na sua cidade.</p>
+      <div class="qf-final-cta__cta">
+        <a class="qf-store" href="#" aria-label="Baixe na Play Store (em breve)">
+          <svg class="qf-store__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 2.3c-.4.4-.6.9-.6 1.5v16.4c0 .6.2 1.1.6 1.5l9.5-9.7L3.6 2.3zm10.8 8.2 2.4-2.4-9.5-5.4 7.1 7.8zm0 3.4-7.1 7.7 9.5-5.3-2.4-2.4zm6-5.3-2.6-1.5-2.7 2.7 2.7 2.8 2.6-1.5c.7-.4.7-1.4 0-1.8z"/></svg>
+          <span>
+            <span class="qf-store__small">Disponível em breve</span>
+            <span class="qf-store__name">Google Play <span class="qf-store__soon">soon</span></span>
+          </span>
+        </a>
+        <a class="qf-store" href="#" aria-label="Baixe na App Store (em breve)">
+          <svg class="qf-store__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.7c0-2.4 2-3.6 2.1-3.6-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.1-2.9.9-3.6.9s-1.9-.9-3.1-.8c-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.5.8 1.1 1.8 2.4 3 2.4 1.2 0 1.7-.8 3.2-.8s1.9.8 3.2.7c1.3 0 2.2-1.2 3-2.3.9-1.3 1.3-2.6 1.3-2.7 0 0-2.5-.9-2.5-3.8zM14 4.6c.6-.8 1.1-1.9 1-3-.9 0-2 .6-2.7 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2-.5 2.7-1.3z"/></svg>
+          <span>
+            <span class="qf-store__small">Disponível em breve</span>
+            <span class="qf-store__name">App Store <span class="qf-store__soon">soon</span></span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="qf-footer" id="documentos">
+  <div class="qf-container">
+    <div class="qf-footer__grid">
+      <div class="qf-footer__brand">
+        <a href="#" class="qf-logo" aria-label="QuemFaz">
+          <svg class="qf-logo__mark" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="lgmark2" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#0F766E"></stop>
+                <stop offset="1" stop-color="#115E59"></stop>
+              </linearGradient>
+            </defs>
+            <rect width="64" height="64" rx="14" fill="url(#lgmark2)"></rect>
+            <circle cx="28" cy="28" r="14" fill="none" stroke="#FFFFFF" stroke-width="4"></circle>
+            <path d="M38 38 L48 48" stroke="#FBBF24" stroke-width="4.5" stroke-linecap="round"></path>
+            <circle cx="28" cy="28" r="2.5" fill="#FBBF24"></circle>
+          </svg>
+          <span class="qf-logo__text">Quem<em>Faz</em></span>
+        </a>
+        <p>O radar de profissionais de serviços locais. Sem comissão, sem mensalidade, sem leads pagos.</p>
+      </div>
+      <div>
+        <h5>Produto</h5>
+        <ul>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#categorias">Categorias</a></li>
+          <li><a href="#para-profissionais">Pra profissionais</a></li>
+          <li><a href="#faq">Dúvidas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Documentos</h5>
+        <ul>
+          <li><a href="privacidade.html">Política de Privacidade</a></li>
+          <li><a href="termos.html">Termos de Uso</a></li>
+          <li><a href="diretrizes.html">Diretrizes da Comunidade</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contato</h5>
+        <ul>
+          <li><a href="mailto:contato@quemfaz.com.br">contato@quemfaz.com.br</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="qf-footer__bottom">
+      <span>© 2026 QuemFaz · Feito no Brasil, por <a href="https://www.linkedin.com/in/lucasfugisawa/" target="_blank" rel="noopener noreferrer">Lucas Fugisawa</a></span>
+      <span>quemfaz.com.br</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ TWEAKS ROOT ============ -->
+<div id="qf-tweaks-root"></div>
+
+<script>
+/* ===== Mobile menu ===== */
+(function() {
+  var btn = document.getElementById('qfMenuBtn');
+  var nav = document.getElementById('qfMobileNav');
+  if (!btn || !nav) return;
+  btn.addEventListener('click', function() {
+    var open = nav.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (open) nav.removeAttribute('hidden'); else nav.setAttribute('hidden', '');
+  });
+  nav.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      nav.classList.remove('is-open');
+      btn.setAttribute('aria-expanded', 'false');
+      nav.setAttribute('hidden', '');
+    });
+  });
+})();
+
+/* ===== Header scroll shadow ===== */
+(function() {
+  var header = document.getElementById('qfHeader');
+  if (!header) return;
+  var update = function() { header.classList.toggle('is-scrolled', window.scrollY > 8); };
+  update();
+  window.addEventListener('scroll', update, { passive: true });
+})();
+
+/* ===== Tabs (Como funciona) ===== */
+(function() {
+  var tabs = document.querySelectorAll('[role="tab"]');
+  var panes = document.querySelectorAll('[data-tab-pane]');
+  tabs.forEach(function(t) {
+    t.addEventListener('click', function() {
+      var name = t.getAttribute('data-tab');
+      tabs.forEach(function(x) { x.setAttribute('aria-selected', x === t ? 'true' : 'false'); });
+      panes.forEach(function(p) {
+        var match = p.getAttribute('data-tab-pane') === name;
+        p.classList.toggle('is-active', match);
+        if (match) p.removeAttribute('hidden'); else p.setAttribute('hidden', '');
+      });
+    });
+  });
+})();
+
+/* ===== Tweaks panel (edit mode) =====
+   Custom panel: simple, draggable, persisted via __edit_mode_set_keys.
+*/
+(function() {
+  var TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+    "accent": "petroleo",
+    "density": "normal",
+    "headlineVariant": "cidade",
+    "showHeroPhone": true
+  }/*EDITMODE-END*/;
+
+  var state = Object.assign({}, TWEAK_DEFAULTS);
+  var panelEl = null;
+
+  var HEADLINES = {
+    cidade:    { h: 'Quem faz o que você precisa, <em>aqui na sua cidade</em>.',
+                 sub: 'Faxina, eletricista, pintor, encanador, garçom. Encontre alguém de confiança perto de você e converse direto pelo WhatsApp — sem intermediário, sem taxa.' },
+    valoriza:  { h: 'Pessoas que <em>fazem coisas</em> pra outras pessoas.',
+                 sub: 'O QuemFaz nasceu pra valorizar o profissional brasileiro. Você busca, encontra alguém de confiança da sua cidade, e conversa direto pelo WhatsApp.' },
+    direto:    { h: 'Sem comissão. <em>Sem intermediário</em>.',
+                 sub: 'Você busca o profissional, fala direto pelo WhatsApp e combina o serviço. O QuemFaz só te conecta — o resto é entre vocês.' }
+  };
+
+  function applyState() {
+    var root = document.documentElement;
+    // Accent
+    if (state.accent === 'ambar') {
+      root.style.setProperty('--qf-primary', '#D97706');
+      root.style.setProperty('--qf-primary-soft', '#FEF3C7');
+      root.style.setProperty('--qf-primary-strong', '#B45309');
+    } else if (state.accent === 'azul') {
+      root.style.setProperty('--qf-primary', '#1D4ED8');
+      root.style.setProperty('--qf-primary-soft', '#DBEAFE');
+      root.style.setProperty('--qf-primary-strong', '#1E40AF');
+    } else {
+      root.style.removeProperty('--qf-primary');
+      root.style.removeProperty('--qf-primary-soft');
+      root.style.removeProperty('--qf-primary-strong');
+    }
+    // Density
+    if (state.density === 'compact') root.style.setProperty('--qf-density-y', '0.7');
+    else if (state.density === 'roomy') root.style.setProperty('--qf-density-y', '1.25');
+    else root.style.setProperty('--qf-density-y', '1');
+    // Headline
+    var h1 = document.querySelector('[data-headline-slot]');
+    var sub = document.querySelector('[data-sub-slot]');
+    var hl = HEADLINES[state.headlineVariant] || HEADLINES.cidade;
+    if (h1) h1.innerHTML = hl.h;
+    if (sub) sub.textContent = hl.sub;
+    // Hero phone visibility
+    var viz = document.querySelector('[data-hero-viz]');
+    if (viz) viz.style.display = state.showHeroPhone ? '' : 'none';
+  }
+
+  function setKey(key, value) {
+    state[key] = value;
+    var edits = {}; edits[key] = value;
+    try { window.parent.postMessage({ type: '__edit_mode_set_keys', edits: edits }, '*'); } catch (e) {}
+    applyState();
+    if (panelEl) renderPanel();
+  }
+
+  function renderPanel() {
+    if (!panelEl) return;
+    panelEl.innerHTML = '\
+      <div class="qf-tw-head">\
+        <strong>Tweaks</strong>\
+        <button type="button" class="qf-tw-close" aria-label="Fechar tweaks">×</button>\
+      </div>\
+      <div class="qf-tw-body">\
+        <div class="qf-tw-section">\
+          <label>Cor de destaque</label>\
+          <div class="qf-tw-radio">\
+            <button data-k="accent" data-v="petroleo" class="' + (state.accent==='petroleo'?'is-on':'') + '"><span style="background:#0F766E"></span>Petróleo</button>\
+            <button data-k="accent" data-v="ambar" class="' + (state.accent==='ambar'?'is-on':'') + '"><span style="background:#D97706"></span>Âmbar</button>\
+            <button data-k="accent" data-v="azul" class="' + (state.accent==='azul'?'is-on':'') + '"><span style="background:#1D4ED8"></span>Azul</button>\
+          </div>\
+        </div>\
+        <div class="qf-tw-section">\
+          <label>Densidade</label>\
+          <div class="qf-tw-radio">\
+            <button data-k="density" data-v="compact" class="' + (state.density==='compact'?'is-on':'') + '">Compacto</button>\
+            <button data-k="density" data-v="normal" class="' + (state.density==='normal'?'is-on':'') + '">Normal</button>\
+            <button data-k="density" data-v="roomy" class="' + (state.density==='roomy'?'is-on':'') + '">Espaçoso</button>\
+          </div>\
+        </div>\
+        <div class="qf-tw-section">\
+          <label>Headline</label>\
+          <div class="qf-tw-radio qf-tw-radio--col">\
+            <button data-k="headlineVariant" data-v="cidade" class="' + (state.headlineVariant==='cidade'?'is-on':'') + '">Quem faz, na sua cidade</button>\
+            <button data-k="headlineVariant" data-v="valoriza" class="' + (state.headlineVariant==='valoriza'?'is-on':'') + '">Pessoas que fazem coisas</button>\
+            <button data-k="headlineVariant" data-v="direto" class="' + (state.headlineVariant==='direto'?'is-on':'') + '">Sem comissão, sem intermediário</button>\
+          </div>\
+        </div>\
+        <div class="qf-tw-section">\
+          <label class="qf-tw-toggle">\
+            <span>Mostrar mockup do app</span>\
+            <input type="checkbox" data-k="showHeroPhone" ' + (state.showHeroPhone ? 'checked' : '') + '>\
+            <span class="qf-tw-toggle__track"><span class="qf-tw-toggle__thumb"></span></span>\
+          </label>\
+        </div>\
+      </div>\
+    ';
+    panelEl.querySelectorAll('button[data-k]').forEach(function(b) {
+      b.addEventListener('click', function() {
+        setKey(b.getAttribute('data-k'), b.getAttribute('data-v'));
+      });
+    });
+    panelEl.querySelectorAll('input[data-k]').forEach(function(i) {
+      i.addEventListener('change', function() {
+        setKey(i.getAttribute('data-k'), i.checked);
+      });
+    });
+    panelEl.querySelector('.qf-tw-close').addEventListener('click', closePanel);
+  }
+
+  function ensureStyles() {
+    if (document.getElementById('qf-tw-styles')) return;
+    var s = document.createElement('style');
+    s.id = 'qf-tw-styles';
+    s.textContent = '\
+      #qf-tw-panel { position: fixed; right: 16px; bottom: 16px; width: 280px; background: #fff; border-radius: 16px; box-shadow: 0 18px 44px rgba(15,23,42,0.20), 0 6px 14px rgba(15,23,42,0.10); z-index: 100; overflow: hidden; font-family: var(--qf-font); color: #0F172A; }\
+      .qf-tw-head { display:flex; align-items:center; justify-content:space-between; padding: 12px 16px; border-bottom: 1px solid #E2E8F0; font-size: 14px; }\
+      .qf-tw-close { width: 28px; height: 28px; border-radius: 50%; background: #F8FAFA; color: #475569; font-size: 18px; line-height: 1; }\
+      .qf-tw-body { padding: 14px 16px 16px; max-height: 70vh; overflow-y: auto; }\
+      .qf-tw-section { margin-bottom: 16px; }\
+      .qf-tw-section:last-child { margin-bottom: 0; }\
+      .qf-tw-section label { display:block; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #64748B; margin-bottom: 8px; }\
+      .qf-tw-radio { display: flex; gap: 6px; flex-wrap: wrap; }\
+      .qf-tw-radio--col { flex-direction: column; }\
+      .qf-tw-radio button { display:inline-flex; align-items:center; gap:6px; padding: 8px 10px; border-radius: 9999px; background: #F8FAFA; font-size: 12px; font-weight: 600; color: #475569; }\
+      .qf-tw-radio button span { width: 10px; height: 10px; border-radius: 50%; }\
+      .qf-tw-radio button.is-on { background: #0F766E; color: #fff; }\
+      .qf-tw-toggle { display:flex; align-items:center; justify-content: space-between; gap: 12px; font-size: 13px; font-weight: 500; color: #0F172A; cursor:pointer; }\
+      .qf-tw-toggle input { display: none; }\
+      .qf-tw-toggle__track { width: 36px; height: 20px; border-radius: 9999px; background: #CBD5E1; position: relative; transition: background 150ms; flex: none; }\
+      .qf-tw-toggle__thumb { position: absolute; top: 2px; left: 2px; width: 16px; height: 16px; border-radius: 50%; background: #fff; transition: transform 150ms; }\
+      .qf-tw-toggle input:checked ~ .qf-tw-toggle__track { background: #0F766E; }\
+      .qf-tw-toggle input:checked ~ .qf-tw-toggle__track .qf-tw-toggle__thumb { transform: translateX(16px); }\
+      @media (max-width: 480px) { #qf-tw-panel { right: 8px; left: 8px; bottom: 8px; width: auto; } }\
+    ';
+    document.head.appendChild(s);
+  }
+
+  function openPanel() {
+    ensureStyles();
+    if (!panelEl) {
+      panelEl = document.createElement('div');
+      panelEl.id = 'qf-tw-panel';
+      document.body.appendChild(panelEl);
+    }
+    panelEl.style.display = 'block';
+    renderPanel();
+  }
+  function closePanel() {
+    if (panelEl) panelEl.style.display = 'none';
+    try { window.parent.postMessage({ type: '__edit_mode_dismissed' }, '*'); } catch (e) {}
+  }
+
+  // Listen first, then announce.
+  window.addEventListener('message', function(e) {
+    var d = e && e.data;
+    if (!d || !d.type) return;
+    if (d.type === '__activate_edit_mode') openPanel();
+    else if (d.type === '__deactivate_edit_mode') closePanel();
+  });
+  try { window.parent.postMessage({ type: '__edit_mode_available' }, '*'); } catch (e) {}
+
+  // Apply initial defaults so headline is rendered server-side equivalent.
+  applyState();
+})();
+</script>
+</body>
+</html>

@@ -1,6 +1,10 @@
 ---
 layout: default
-title: Termos de Uso — QuemFaz
+title: Termos de Uso
+description: Termos que regem o uso do QuemFaz por consumidores e profissionais.
+eyebrow: Termos
+lede: Termos que regem o uso do QuemFaz por consumidores e profissionais.
+updated: 2026-05-01
 permalink: /termos.html
 ---
 
@@ -9,16 +13,13 @@ Quando a estrutura societária mudar (criação de PJ), atualizar a Seção 1
 e bumpar a Versão para 1.1.0.
 -->
 
-# Termos de Uso
-
-**Última atualização:** 2026-05-01
 **Versão:** 1.0.0
 
 ## 1. O que é o QuemFaz
 
 O QuemFaz é uma plataforma digital de **conexão** entre consumidores que precisam de serviços e profissionais que os oferecem. Atuamos exclusivamente como ponto de encontro inicial entre as partes — não somos parte das negociações nem dos serviços contratados, não intermediamos pagamentos, não emitimos garantias.
 
-A operação do QuemFaz, na presente data, é mantida por **Lucas Fugisawa**, pessoa física, com contato oficial em [suporte@quemfaz.com.br](mailto:suporte@quemfaz.com.br). Quaisquer alterações na estrutura societária da operação serão refletidas nestes Termos.
+A operação do QuemFaz, na presente data, é mantida por **Lucas Fugisawa**, pessoa física, com contato oficial em [contato@quemfaz.com.br](mailto:contato@quemfaz.com.br). Quaisquer alterações na estrutura societária da operação serão refletidas nestes Termos.
 
 ## 2. Quem pode usar
 
@@ -78,7 +79,7 @@ Podemos modificar, suspender ou descontinuar partes do serviço a qualquer momen
 
 ## 8. Encerramento da conta
 
-**Pelo usuário.** Você pode encerrar sua conta a qualquer momento — basta enviar uma solicitação para [suporte@quemfaz.com.br](mailto:suporte@quemfaz.com.br) ou utilizar a opção correspondente dentro do aplicativo, quando disponível.
+**Pelo usuário.** Você pode encerrar sua conta a qualquer momento — basta enviar uma solicitação para [contato@quemfaz.com.br](mailto:contato@quemfaz.com.br) ou utilizar a opção correspondente dentro do aplicativo, quando disponível.
 
 **Pelo QuemFaz.** Podemos suspender ou encerrar contas que violem estes Termos, as Diretrizes da Comunidade ou a legislação aplicável, sem prejuízo das demais medidas cabíveis.
 
@@ -115,4 +116,4 @@ Se qualquer disposição destes Termos for considerada inválida ou inexequível
 
 ## 14. Como entrar em contato
 
-Para dúvidas, sugestões ou problemas relacionados a estes Termos, escreva para [suporte@quemfaz.com.br](mailto:suporte@quemfaz.com.br).
+Para dúvidas, sugestões ou problemas relacionados a estes Termos, escreva para [contato@quemfaz.com.br](mailto:contato@quemfaz.com.br).

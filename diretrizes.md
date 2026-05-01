@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Diretrizes da Comunidade — QuemFaz
+title: Diretrizes da Comunidade
+description: O que esperamos e o que não permitimos no QuemFaz — pra todo mundo, clientes e profissionais.
+eyebrow: Diretrizes
+lede: O que esperamos e o que não permitimos no QuemFaz — pra todo mundo, clientes e profissionais.
+updated: 2026-05-01
 permalink: /diretrizes.html
 ---
-
-# Diretrizes da Comunidade
-
-**Última atualização:** 2026-05-01
 
 O QuemFaz só funciona se for um lugar onde profissionais e clientes se encontram com confiança. Estas diretrizes valem para todo mundo — clientes, profissionais, e qualquer pessoa que use o aplicativo.
 
@@ -42,14 +42,14 @@ Os seguintes tipos de uso resultam em bloqueio imediato do perfil ou conta:
 
 Se você encontrar algo que viola estas diretrizes, use o botão "Reportar" no perfil em questão dentro do aplicativo. Nossa equipe revisa todos os relatos.
 
-Para casos urgentes (ameaças, violações graves), escreva diretamente para [suporte@quemfaz.com.br](mailto:suporte@quemfaz.com.br).
+Para casos urgentes (ameaças, violações graves), escreva diretamente para [contato@quemfaz.com.br](mailto:contato@quemfaz.com.br).
 
 ## Processo de moderação
 
 - Analisamos cada relato individualmente.
 - Em casos claros (conteúdo ilegal, ofensivo), o perfil é bloqueado imediatamente.
 - Em casos ambíguos, podemos pedir mais contexto antes de tomar decisão.
-- Profissionais bloqueados podem contestar a decisão escrevendo para [suporte@quemfaz.com.br](mailto:suporte@quemfaz.com.br) com o assunto "Contestação".
+- Profissionais bloqueados podem contestar a decisão escrevendo para [contato@quemfaz.com.br](mailto:contato@quemfaz.com.br) com o assunto "Contestação".
 
 ## Mudanças nestas diretrizes
 

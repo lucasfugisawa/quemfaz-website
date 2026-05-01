@@ -1,6 +1,10 @@
 ---
 layout: default
-title: Política de Privacidade — QuemFaz
+title: Política de Privacidade
+description: Como o QuemFaz coleta, usa, retém e protege seus dados pessoais — em conformidade com a LGPD.
+eyebrow: Privacidade
+lede: Como o QuemFaz coleta, usa, retém e protege seus dados pessoais — em conformidade com a LGPD.
+updated: 2026-05-01
 permalink: /privacidade.html
 ---
 
@@ -10,9 +14,6 @@ bumpar a Versão para 1.1.0 e atualizar LEGAL_REQUIRED_PRIVACY_VERSION no SSM
 para forçar reconsentimento dos titulares.
 -->
 
-# Política de Privacidade
-
-**Última atualização:** 2026-05-01
 **Versão:** 1.0.0
 
 ## 1. Quem somos
@@ -22,11 +23,11 @@ O **QuemFaz** é uma plataforma que conecta consumidores a prestadores de servi�
 **Controlador dos dados pessoais:**
 Lucas Fugisawa, brasileiro, inscrito no CPF sob o nº 220.414.728-12.
 
-**Canal oficial de contato:** [suporte@quemfaz.com.br](mailto:suporte@quemfaz.com.br)
+**Canal oficial de contato:** [contato@quemfaz.com.br](mailto:contato@quemfaz.com.br)
 
 **Encarregado pelo Tratamento de Dados Pessoais (DPO), nos termos do art. 41 da LGPD:**
 Lucas Fugisawa.
-Contato: [suporte@quemfaz.com.br](mailto:suporte@quemfaz.com.br) com o assunto **"[LGPD] DPO"**.
+Contato: [contato@quemfaz.com.br](mailto:contato@quemfaz.com.br) com o assunto **"[LGPD] DPO"**.
 
 ## 2. Quais dados coletamos
 
@@ -57,7 +58,7 @@ Cada tratamento de dados pessoais realizado pelo QuemFaz tem fundamento expresso
 | Métricas internas para entender quais serviços são mais buscados em cada cidade | Histórico de buscas (agregado) | Legítimo interesse (art. 7º, IX) |
 | Detecção de abuso (rate limiting por IP, identificação de relatos repetidos) | Identificadores técnicos | Legítimo interesse (art. 7º, IX), com prevalência da segurança da plataforma |
 | Diagnóstico de falhas técnicas | Identificadores técnicos, traços de erro | Legítimo interesse (art. 7º, IX) |
-| Resposta a contatos enviados a [suporte@quemfaz.com.br](mailto:suporte@quemfaz.com.br) | Email do remetente, conteúdo da mensagem | Execução de contrato (art. 7º, V) ou consentimento (art. 7º, I), conforme o caso |
+| Resposta a contatos enviados a [contato@quemfaz.com.br](mailto:contato@quemfaz.com.br) | Email do remetente, conteúdo da mensagem | Execução de contrato (art. 7º, V) ou consentimento (art. 7º, I), conforme o caso |
 | Transferência internacional para infraestrutura nos EUA | Todos os dados pessoais armazenados | Consentimento específico (art. 33, VIII), detalhado na Seção 5 |
 
 **Não vendemos seus dados pessoais a terceiros. Não os usamos para publicidade direcionada.**
@@ -122,7 +123,7 @@ Conforme os artigos 17 a 22 da LGPD, você pode exercer os seguintes direitos a 
 - **Informação** sobre as entidades públicas e privadas com as quais compartilhamos seus dados;
 - **Revogação do consentimento**, nos termos do § 5º do art. 8º da LGPD.
 
-Para exercer qualquer destes direitos, envie um email para [suporte@quemfaz.com.br](mailto:suporte@quemfaz.com.br) com o assunto **"[LGPD] Solicitação"**. Buscamos responder em até **15 dias** corridos a contar do recebimento, conforme prazo recomendado pela ANPD.
+Para exercer qualquer destes direitos, envie um email para [contato@quemfaz.com.br](mailto:contato@quemfaz.com.br) com o assunto **"[LGPD] Solicitação"**. Buscamos responder em até **15 dias** corridos a contar do recebimento, conforme prazo recomendado pela ANPD.
 
 ## 9. Segurança da informação e notificação de incidentes
 
@@ -146,7 +147,7 @@ Quando alterações materiais forem feitas, o número da versão no topo desta p
 
 ## 12. Como entrar em contato
 
-- **Suporte / dúvidas gerais:** [suporte@quemfaz.com.br](mailto:suporte@quemfaz.com.br)
+- **Suporte / dúvidas gerais:** [contato@quemfaz.com.br](mailto:contato@quemfaz.com.br)
 - **Solicitações relativas a dados pessoais (LGPD):** mesmo email, com o assunto **"[LGPD] Solicitação"**
 - **Encarregado pelo Tratamento de Dados (DPO):** mesmo email, com o assunto **"[LGPD] DPO"**
 - **Autoridade Nacional de Proteção de Dados (ANPD):** [www.gov.br/anpd](https://www.gov.br/anpd) — você tem o direito de fazer reclamações diretamente à ANPD se entender que seus direitos não foram atendidos.
