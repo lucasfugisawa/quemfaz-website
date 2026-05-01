@@ -5,10 +5,8 @@ permalink: /termos.html
 ---
 
 <!--
-ANTES DE PUBLICAR (preencher os placeholders abaixo):
-- {{CIDADE_DO_CONTROLADOR}}: cidade da comarca de eleição (ex.: São Paulo)
-- {{UF}}: UF da comarca (ex.: SP)
-Quando a estrutura societária mudar (criação de PJ), atualizar a Seção 1, bumpar a Versão para 1.1.0.
+Quando a estrutura societária mudar (criação de PJ), atualizar a Seção 1
+e bumpar a Versão para 1.1.0.
 -->
 
 # Termos de Uso
@@ -107,7 +105,7 @@ O tratamento de seus dados pessoais está descrito na [Política de Privacidade]
 
 Estes Termos são regidos pelas leis da República Federativa do Brasil.
 
-Para dirimir quaisquer controvérsias decorrentes destes Termos, fica eleito o **foro da comarca de {{CIDADE_DO_CONTROLADOR}}, Estado de {{UF}}**, com renúncia a qualquer outro, por mais privilegiado que seja.
+Para dirimir quaisquer controvérsias decorrentes destes Termos, fica eleito o **foro da comarca de Batatais, Estado de SP**, com renúncia a qualquer outro, por mais privilegiado que seja.
 
 **Ressalva relativa a relações de consumo.** Esta cláusula de foro de eleição não se aplica a disputas envolvendo consumidores na qualidade de pessoas físicas e na hipótese em que ela importe prejuízo ao acesso à justiça, situação em que prevalece o foro de domicílio do consumidor, conforme art. 101, inciso I, do Código de Defesa do Consumidor (Lei nº 8.078/1990).
 

@@ -5,10 +5,9 @@ permalink: /privacidade.html
 ---
 
 <!--
-ANTES DE PUBLICAR (preencher os placeholders abaixo):
-- {{CPF_DO_CONTROLADOR}}: CPF do controlador (Lucas Fugisawa), formato XXX.XXX.XXX-XX
-Quando a estrutura societária mudar (criação de PJ), atualizar a Seção 1, bumpar a Versão para 1.1.0
-e atualizar LEGAL_REQUIRED_PRIVACY_VERSION no SSM para forçar reconsentimento.
+Quando a estrutura societária mudar (criação de PJ), atualizar a Seção 1,
+bumpar a Versão para 1.1.0 e atualizar LEGAL_REQUIRED_PRIVACY_VERSION no SSM
+para forçar reconsentimento dos titulares.
 -->
 
 # Política de Privacidade
@@ -21,7 +20,7 @@ e atualizar LEGAL_REQUIRED_PRIVACY_VERSION no SSM para forçar reconsentimento.
 O **QuemFaz** é uma plataforma que conecta consumidores a prestadores de serviços locais no Brasil.
 
 **Controlador dos dados pessoais:**
-Lucas Fugisawa, brasileiro, inscrito no CPF sob o nº {{CPF_DO_CONTROLADOR}}.
+Lucas Fugisawa, brasileiro, inscrito no CPF sob o nº 220.414.728-12.
 
 **Canal oficial de contato:** [suporte@quemfaz.com.br](mailto:suporte@quemfaz.com.br)
 
