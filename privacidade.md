@@ -81,6 +81,7 @@ Compartilhamos apenas com provedores de infraestrutura essenciais ao funcionamen
 | Sentry | Identificadores técnicos + traços de erro (sem nome/telefone/email) | Monitoramento de erros |
 | OpenAI | Trechos de descrição de perfil profissional, durante o cadastro | Interpretação de descrições para mapeamento ao catálogo de serviços |
 | Operadoras de SMS (AWS SNS) | Número de telefone, código OTP de 6 dígitos | Envio do SMS de autenticação |
+| Amazon CloudWatch RUM | Pageviews do site `quemfaz.com.br`, métricas de performance (Web Vitals), e erros de JavaScript — em modo anônimo (sem cookies, sem identificadores persistentes) | Diagnóstico técnico e métricas de tráfego do website |
 
 Compartilhamentos com autoridades públicas ocorrem apenas mediante ordem judicial ou requisição legal formal, conforme art. 26 da LGPD.
 
